@@ -63,8 +63,10 @@ var runRestTimer = function() {
 
 		if (restSeconds < 10) {
 			restTimer.textContent = `Rest: ${restMinutes}:0${restSeconds}`;
+			document.title = `Rest: ${restMinutes}:0${restSeconds}`;
 		} else {
 			restTimer.textContent = `Rest: ${restMinutes}:${restSeconds}`;
+			document.title = `Rest: ${restMinutes}:${restSeconds}`;
 		}
 
 		if (restMinutes == 0 && restSeconds == 0) {
@@ -90,8 +92,10 @@ var runWorkTimer = function() {
 
 		if (workSeconds < 10) {
 			workTimer.textContent = `Work: ${workMinutes}:0${workSeconds}`;
+			document.title = `Work: ${workMinutes}:0${workSeconds}`;
 		} else {
 			workTimer.textContent = `Work: ${workMinutes}:${workSeconds}`;
+			document.title = `Work: ${workMinutes}:${workSeconds}`;
 		}
 
 		if (workMinutes == 0 && workSeconds == 0) {
@@ -122,6 +126,7 @@ function resetTimer() {
 
 	workTimer.textContent = `Work: ${workMinutes}:0${workSeconds}`;
 	restTimer.textContent = `Rest: ${restMinutes}:0${restSeconds}`;
+	document.title = 'Pomodoro Timer'
 
 }
 
